@@ -127,7 +127,7 @@ export default function SignUp() {
           </Button>
           <Grid >
             <Grid>
-              <Link href="/React-Material-UI/login" variant="body2">
+              <Link href="/login" variant="body2">
                 Already have an account? Sign in
               </Link>
             </Grid>

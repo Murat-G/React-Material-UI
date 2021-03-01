@@ -84,12 +84,12 @@ function Signin() {
           </Button>
           <Grid container>
             <Grid item xs>
-              <Link href="/React-Material-UI/forgotpasword" variant="body2">
+              <Link href="/forgotpasword" variant="body2">
                 Forgot password?
               </Link>
             </Grid>
             <Grid item>
-              <Link href="/React-Material-UI/register" variant="body2">
+              <Link href="/register" variant="body2">
                 {"Don't have an account? Sign Up"}
               </Link>
             </Grid>

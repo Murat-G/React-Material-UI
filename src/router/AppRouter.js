@@ -14,12 +14,12 @@ function AppRouter() {
     <Router>
       <HeaderBar/>
       <Switch>
-        <Route exact path="/React-Material-UI/forgotpasword" component={ForgotPassword}/>
-        <Route exact path="/React-Material-UI/login" component={SignIn} />
-        <Route exact path="/React-Material-UI/register" component={SignUp} />
-        <Route exact path="/React-Material-UI/contact" component={Contact}/>
-        <Route exact path="/React-Material-UI/about" component={About}/>
-        <Route path="/React-Material-UI" component={Home} />
+        <Route exact path="/forgotpasword" component={ForgotPassword}/>
+        <Route exact path="/login" component={SignIn} />
+        <Route exact path="/register" component={SignUp} />
+        <Route exact path="/contact" component={Contact}/>
+        <Route exact path="/about" component={About}/>
+        <Route path="/" component={Home} />
       </Switch>
       <FooterBar/>
     </Router>

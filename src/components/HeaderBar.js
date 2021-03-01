@@ -128,7 +128,7 @@ function HeaderBar() {
           </IconButton>
 
           <Typography variant="h7" className={classes.title}> 
-          <Button href="/React-Material-UI">
+          <Button href="/">
             <div className={classes.leftTitle}>
               <Avatar src={UlakApp} />
               <p style={{color: "white"}}> UlakApp </p>
@@ -138,26 +138,26 @@ function HeaderBar() {
           <Typography variant="h7" className={classes.title}>
             <div className={classes.middle}>
 
-              <Button color="inherit" href="/React-Material-UI">
+              <Button color="inherit" href="/">
                 Home    
               </Button>
 
-              <Button color="inherit" href="/React-Material-UI/about">
+              <Button color="inherit" href="/about">
                 About
               </Button>
 
-              <Button color="inherit" href="/React-Material-UI/contact">
+              <Button color="inherit" href="/contact">
                 Contact
               </Button>
             
             </div>
           </Typography>
 
-          <Button color="inherit" href="/React-Material-UI/login">
+          <Button color="inherit" href="/login">
             Login
           </Button>
 
-          <Button color="inherit" href="/React-Material-UI/register">
+          <Button color="inherit" href="/register">
             Register
           </Button>
 
