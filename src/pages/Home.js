@@ -37,9 +37,9 @@ function Home() {
             </Typography>  
         </Grid>
 
-      <Grid xs={12} container spacing={3}>
-        <Grid container xs={12} justify="center" spacing={3}>
-          <Grid item xs={4}>
+      <Grid container lg={12} spacing={3}>
+        <Grid container lg={12} justify="center" spacing={3}>
+          <Grid item  lg ={4} xs={12}>
             <Paper className={classes.paper}>
               <Grid container wrap="nowrap" spacing={3}>
                 <Grid item>
@@ -52,10 +52,10 @@ function Home() {
             </Paper>
           </Grid>
 
-          <Grid item xs={4}>
+          <Grid item lg ={4} xs={12}>
             <Paper className={classes.paper}>
               <Grid container wrap="nowrap" spacing={2}>
-                <Grid item>
+                <Grid item >
                   <Avatar src="https://ulakapp.com/img/service-normal.png" />
                 </Grid>
                 <Grid item>
@@ -66,8 +66,8 @@ function Home() {
           </Grid>
         </Grid>
 
-        <Grid container xs={12} justify="center" spacing={3}>
-          <Grid item xs={4}>
+        <Grid container lg={12} justify="center" spacing={3}>
+          <Grid item lg ={4} xs={12}>
             <Paper className={classes.paper}>
               <Grid container wrap="nowrap" spacing={2}>
                 <Grid item>
@@ -80,7 +80,7 @@ function Home() {
             </Paper>
           </Grid>
 
-          <Grid item xs={4}>
+          <Grid item lg ={4} xs={12}>
             <Paper className={classes.paper}>
               <Grid container wrap="nowrap" spacing={2}>
                 <Grid item>
@@ -94,8 +94,8 @@ function Home() {
           </Grid>
         </Grid>
 
-        <Grid container xs={12} justify="center" spacing={3}>
-          <Grid item xs={4}>
+        <Grid container lg={12} justify="center" spacing={3}>
+          <Grid item lg ={4} xs={12}>
             <Paper className={classes.paper}>
               <Grid container wrap="nowrap" spacing={2}>
                 <Grid item>
@@ -108,7 +108,7 @@ function Home() {
             </Paper>
           </Grid>
 
-          <Grid item xs={4}>
+          <Grid item lg ={4} xs={12}>
             <Paper className={classes.paper}>
               <Grid container wrap="nowrap" spacing={2}>
                 <Grid item>

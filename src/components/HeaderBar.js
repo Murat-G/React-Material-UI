@@ -13,24 +13,37 @@ import MailIcon from '@material-ui/icons/Mail';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    marginBottom: "1em"
+    marginBottom: "1em",
+  },
+  fullHeader: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%',
+    "@media (max-width: 700px)": {
+      flexDirection:'column'
+    },
   },
   menuButton: {
     marginRight: theme.spacing(2),
     marginLeft: "1em",
   },
   title: {
-    flexGrow: 1,
     display: "flex",
-    flexDirection: "row"
+    flexDirection: "row",
+    justifyContent: 'center'
   },
   leftTitle: {
     display: "flex",
-    flexDirection: "row"
+    flexDirection: "row",
+    
   },
   middle: {
     display: 'flex',
-    wrap: 'wrap'
+  },
+  rightTitle: {
+    display: 'flex',
+    flexDirection: 'row'
   }
 }));
 
@@ -127,14 +140,21 @@ function HeaderBar() {
             <MenuIcon />
           </IconButton>
 
+          <div className={classes.fullHeader}>
+          
           <Typography variant="h7" className={classes.title}> 
+
+
           <Button href="/">
             <div className={classes.leftTitle}>
               <Avatar src={UlakApp} />
               <p style={{color: "white"}}> UlakApp </p>
             </div>
             </Button>
+
           </Typography>
+
+
           <Typography variant="h7" className={classes.title}>
             <div className={classes.middle}>
 
@@ -153,6 +173,9 @@ function HeaderBar() {
             </div>
           </Typography>
 
+          <Typography variant="h7" className={classes.title}>
+            <div className={classes.rightTitle}>
+
           <Button color="inherit" href="/login">
             Login
           </Button>
@@ -160,17 +183,21 @@ function HeaderBar() {
           <Button color="inherit" href="/register">
             Register
           </Button>
-
-          <div>
+         
             <IconButton
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleMenu}
               color="inherit"
-            >
+              >
               <AccountCircle />
             </IconButton>
+            </div>
+          </Typography>
+          </div>
+          
+        
             <Menu
               id="menu-appbar"
               anchorEl={anchorEl}
@@ -183,7 +210,7 @@ function HeaderBar() {
               <MenuItem onClick={handleClose}>Logout</MenuItem>
 
             </Menu>
-          </div>
+         
         </Toolbar>
       </AppBar>
       <div className={classer.root}>
