@@ -38,11 +38,12 @@ class GoogleMap extends React.Component {
   render() {
     const style = {
       position: "relative",
-      width: '30em',
-      height: '30em',
+      width: '53vh',
+      height: '50vh',
       'marginLeft': 'auto',
-      'marginRight': 'auto'
+      'marginRight': 'auto',
     }
+    
     
     return (
 

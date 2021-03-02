@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Avatar from "@material-ui/core/Avatar";
 import Typography from "@material-ui/core/Typography";
+import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -14,6 +15,12 @@ const useStyles = makeStyles((theme) => ({
     height: 250,
     margin: `${theme.spacing(4)}px auto`,
     padding: theme.spacing(2),
+    borderRadius: 20,
+    "@media (max-width: 700px)": {
+      width: 330,
+      height: 400,
+      borderRadius: 20,
+    },
   },
 }));
 
@@ -27,6 +34,7 @@ function Home() {
   const classes = useStyles();
 
   return (
+    <Container component="main" maxWidth="xl">
     <div className={classes.root} >
         <Grid marginTop = {5}>
             <Typography variant="h4" component="h4" gutterBottom  align="center">
@@ -37,9 +45,9 @@ function Home() {
             </Typography>  
         </Grid>
 
-      <Grid container lg={12} spacing={3}>
+      <Grid container lg={12} xs={12} spacing={3}>
         <Grid container lg={12} justify="center" spacing={3}>
-          <Grid item  lg ={4} xs={12}>
+          <Grid item  lg ={4} xs={12} sm={8}>
             <Paper className={classes.paper}>
               <Grid container wrap="nowrap" spacing={3}>
                 <Grid item>
@@ -52,7 +60,7 @@ function Home() {
             </Paper>
           </Grid>
 
-          <Grid item lg ={4} xs={12}>
+          <Grid item lg ={4} xs={12} sm={8}>
             <Paper className={classes.paper}>
               <Grid container wrap="nowrap" spacing={2}>
                 <Grid item >
@@ -67,7 +75,7 @@ function Home() {
         </Grid>
 
         <Grid container lg={12} justify="center" spacing={3}>
-          <Grid item lg ={4} xs={12}>
+          <Grid item lg ={4} xs={12} sm={8}>
             <Paper className={classes.paper}>
               <Grid container wrap="nowrap" spacing={2}>
                 <Grid item>
@@ -80,7 +88,7 @@ function Home() {
             </Paper>
           </Grid>
 
-          <Grid item lg ={4} xs={12}>
+          <Grid item lg ={4} xs={12} sm={8}>
             <Paper className={classes.paper}>
               <Grid container wrap="nowrap" spacing={2}>
                 <Grid item>
@@ -95,7 +103,7 @@ function Home() {
         </Grid>
 
         <Grid container lg={12} justify="center" spacing={3}>
-          <Grid item lg ={4} xs={12}>
+          <Grid item lg ={4} xs={12} sm={8}>
             <Paper className={classes.paper}>
               <Grid container wrap="nowrap" spacing={2}>
                 <Grid item>
@@ -108,7 +116,7 @@ function Home() {
             </Paper>
           </Grid>
 
-          <Grid item lg ={4} xs={12}>
+          <Grid item lg ={4} xs={12} sm={8}>
             <Paper className={classes.paper}>
               <Grid container wrap="nowrap" spacing={2}>
                 <Grid item>
@@ -123,6 +131,7 @@ function Home() {
         </Grid>
       </Grid>
     </div>
+    </Container>
   );
 }
 

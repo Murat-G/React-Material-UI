@@ -1,7 +1,7 @@
 import React from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Paper from "@material-ui/core/Paper";
-import { Grid, Typography, Avatar } from "@material-ui/core";
+import {Grid, Typography} from "@material-ui/core";
 
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -12,14 +12,15 @@ teslimat detaylarını iletir, ödemenizi güvenli bir şekilde kredi kartından
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    height: "100vh",
     justifyContent: "center",
+    marginBottom: "5em",
+    marginTop: "5em",
   },
   image: {
-    backgroundImage: "url(https://ulakapp.com/img/ulak-app-on-iphone.png)",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "contain",
-    backgroundPosition: "center",
+    width: '40vh',
+  },
+  gridpaper: {
+    borderRadius: "10em",
   },
   paper: {
     margin: theme.spacing(6, 6, 4),
@@ -30,12 +31,14 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     letterSpacing: "5.5",
-    marginTop: "2.5em",
   }, 
   avatar: {
     width: "30em",
-    height: "5em",
     margin: "1rem auto",
+    backgroundColor:"#FAFAFA",
+    "@media (max-width: 700px)": {
+      width: "45vh",
+    },
   },
  
 }));
@@ -46,12 +49,18 @@ export default function SignInSide() {
   return (
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
-      <Grid item sm={4} className={classes.image} />
-      <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+      <div style={{display:'flex', flexDirection:'column',alignItems:'center'}}>
+        <img src="https://ulakapp.com/img/ulak-app-on-iphone.png" alt="mobile" className={classes.image} />
+        <img
+              src="https://appradar.com/wp-content/uploads/App-Store-Google-Play-Icons.png" alt="store"
+              className={classes.avatar}
+        />
+      </div>
+      <Grid item xs={12}  md={5} component={Paper} square className={classes.gridpaper}>
         <div className={classes.paper}>
           <div className={classes.cart}>
             <Typography variant="h4" color="secondary">
-              Kişiye Özel Kurye ULAK
+            <h5 style={{ marginTop:"0px"}}> Kişiye Özel Kurye ULAK</h5>
             </Typography>
             <Typography align="left" variant="h6">
               {message}
@@ -77,10 +86,6 @@ export default function SignInSide() {
               <p>İhtiyacına göre farklı gönderi tipleri seçmeni sağlar.</p>
             </Typography>
           </div>
-            <Avatar
-              src="https://appradar.com/wp-content/uploads/App-Store-Google-Play-Icons.png"
-              className={classes.avatar}
-            />
         </div>
       </Grid>
     </Grid>

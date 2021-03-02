@@ -21,6 +21,10 @@ function Copyright() {
 }
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+    width: '100%'
+  },
   main: {
     marginTop: theme.spacing(8),
     marginBottom: theme.spacing(2),

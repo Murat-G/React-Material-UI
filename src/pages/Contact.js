@@ -8,11 +8,17 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         flexDirection: "column",
         height: "70vh",
-        marginBottom: "30em"
+        marginBottom: "30em",
+        "@media (max-width: 700px)": {
+        marginBottom: "60em",
+        },
     },
     containerTop: {
         display: "flex",
         flexDirection: "row",
+        "@media (max-width: 700px)": {
+            flexDirection:'column',
+          },
     },
     title: {
         display: "flex",
@@ -28,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "#efefef",
         width: "15em",
         borderRadius: "5em",
+        
     },
 }));
 

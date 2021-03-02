@@ -1,58 +1,76 @@
-import React from 'react';
-import { makeStyles,useTheme } from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/Menu';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import {MenuItem, Menu, Button, Toolbar, Typography, IconButton, AppBar, Avatar,CssBaseline,List,Divider,ListItem,ListItemIcon,ListItemText } from '@material-ui/core';
-import UlakApp from '../asset/ulakapp.png'
-import Drawer from '@material-ui/core/Drawer';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+import React from "react";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import MenuIcon from "@material-ui/icons/Menu";
+import AccountCircle from "@material-ui/icons/AccountCircle";
+import {
+  MenuItem,
+  Menu,
+  Button,
+  Toolbar,
+  Typography,
+  IconButton,
+  AppBar,
+  Avatar,
+  CssBaseline,
+  List,
+  Divider,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+} from "@material-ui/core";
+import UlakApp from "../asset/ulakapp.png";
+import Drawer from "@material-ui/core/Drawer";
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import InboxIcon from "@material-ui/icons/MoveToInbox";
+import MailIcon from "@material-ui/icons/Mail";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     marginBottom: "1em",
+    
   },
   fullHeader: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    width: '100%',
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
     "@media (max-width: 700px)": {
-      flexDirection:'column'
+      flexDirection: "column",
     },
   },
   menuButton: {
     marginRight: theme.spacing(2),
     marginLeft: "1em",
+    "@media (max-width: 700px)": {
+      marginLeft: "0em",
+    },
   },
   title: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: 'center'
+    justifyContent: "center",
   },
   leftTitle: {
     display: "flex",
     flexDirection: "row",
-    
   },
   middle: {
-    display: 'flex',
+    display: "flex",
   },
   rightTitle: {
-    display: 'flex',
-    flexDirection: 'row'
-  }
+    display: "flex",
+    flexDirection: "row",
+  },
 }));
 
 const useStylesDrawer = makeStyles((theme) => ({
   root: {
-    display: 'flex',
+    display: "flex",
   },
   appBar: {
-    transition: theme.transitions.create(['margin', 'width'], {
+    transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
@@ -60,7 +78,7 @@ const useStylesDrawer = makeStyles((theme) => ({
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
     marginLeft: drawerWidth,
-    transition: theme.transitions.create(['margin', 'width'], {
+    transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
     }),
@@ -69,7 +87,7 @@ const useStylesDrawer = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   hide: {
-    display: 'none',
+    display: "none",
   },
   drawer: {
     width: drawerWidth,
@@ -79,24 +97,24 @@ const useStylesDrawer = makeStyles((theme) => ({
     width: drawerWidth,
   },
   drawerHeader: {
-    display: 'flex',
-    alignItems: 'center',
+    display: "flex",
+    alignItems: "center",
     padding: theme.spacing(0, 1),
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
-    justifyContent: 'flex-end',
+    justifyContent: "flex-end",
   },
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
-    transition: theme.transitions.create('margin', {
+    transition: theme.transitions.create("margin", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
     marginLeft: -drawerWidth,
   },
   contentShift: {
-    transition: theme.transitions.create('margin', {
+    transition: theme.transitions.create("margin", {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
     }),
@@ -105,7 +123,6 @@ const useStylesDrawer = makeStyles((theme) => ({
 }));
 
 const drawerWidth = 250;
-
 
 function HeaderBar() {
   const classes = useStyles();
@@ -123,132 +140,132 @@ function HeaderBar() {
     setAnchorEl(null);
   };
 
-
   const handleBarMenu = () => {
-    setOpenDrawer(() => !openDrawer)
-  }
+    setOpenDrawer(() => !openDrawer);
+  };
 
   const classer = useStylesDrawer();
   const theme = useTheme();
-
 
   return (
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton edge="start" onClick={handleBarMenu} className={classes.menuButton} color="inherit" aria-label="menu">
+          <IconButton
+            edge="start"
+            onClick={handleBarMenu}
+            className={classes.menuButton}
+            color="inherit"
+            aria-label="menu"
+          >
             <MenuIcon />
           </IconButton>
 
           <div className={classes.fullHeader}>
-          
-          <Typography variant="h7" className={classes.title}> 
-
-
-          <Button href="/">
-            <div className={classes.leftTitle}>
-              <Avatar src={UlakApp} />
-              <p style={{color: "white"}}> UlakApp </p>
-            </div>
-            </Button>
-
-          </Typography>
-
-
-          <Typography variant="h7" className={classes.title}>
-            <div className={classes.middle}>
-
-              <Button color="inherit" href="/">
-                Home    
+            <Typography variant="h7" className={classes.title}>
+              <Button href="/">
+                <div className={classes.leftTitle}>
+                  <Avatar src={UlakApp} />
+                  <p style={{ color: "white" }}> UlakApp </p>
+                </div>
               </Button>
+            </Typography>
 
-              <Button color="inherit" href="/about">
-                About
-              </Button>
+            <Typography variant="h7" className={classes.title}>
+              <div className={classes.middle}>
+                <Button color="inherit" href="/">
+                  Home
+                </Button>
 
-              <Button color="inherit" href="/contact">
-                Contact
-              </Button>
-            
-            </div>
-          </Typography>
+                <Button color="inherit" href="/about">
+                  About
+                </Button>
 
-          <Typography variant="h7" className={classes.title}>
-            <div className={classes.rightTitle}>
+                <Button color="inherit" href="/contact">
+                  Contact
+                </Button>
+              </div>
+            </Typography>
 
-          <Button color="inherit" href="/login">
-            Login
-          </Button>
+            <Typography variant="h7" className={classes.title}>
+              <div className={classes.rightTitle}>
+                <Button color="inherit" href="/login">
+                  Login
+                </Button>
 
-          <Button color="inherit" href="/register">
-            Register
-          </Button>
-         
-            <IconButton
+                <Button color="inherit" href="/register">
+                  Register
+                </Button>
+              </div>
+            </Typography>
+          </div>
+          <IconButton
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleMenu}
               color="inherit"
-              >
+            >
               <AccountCircle />
             </IconButton>
-            </div>
-          </Typography>
-          </div>
-          
-        
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorEl}
-              keepMounted
-              open={open}
-              onClose={handleClose}
-            >
-              <MenuItem onClick={handleClose}>Profile</MenuItem>
-              <MenuItem onClick={handleClose}>My account</MenuItem>
-              <MenuItem onClick={handleClose}>Logout</MenuItem>
 
-            </Menu>
-         
+          <Menu
+            id="menu-appbar"
+            anchorEl={anchorEl}
+            keepMounted
+            open={open}
+            onClose={handleClose}
+          >
+            <MenuItem onClick={handleClose}>Profile</MenuItem>
+            <MenuItem onClick={handleClose}>My account</MenuItem>
+            <MenuItem onClick={handleClose}>Logout</MenuItem>
+          </Menu>
         </Toolbar>
       </AppBar>
       <div className={classer.root}>
-    <CssBaseline />
-    <Drawer
-      className={classer.drawer}
-      variant="persistent"
-      anchor="left"
-      open={openDrawer}
-      classes={{
-        paper: classer.drawerPaper,
-      }}
-    >
-      <div className={classer.drawerHeader}>
-        <IconButton onClick={handleBarMenu}>
-          {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
-        </IconButton>
+        <CssBaseline />
+        <Drawer
+          className={classer.drawer}
+          variant="persistent"
+          anchor="left"
+          open={openDrawer}
+          classes={{
+            paper: classer.drawerPaper,
+          }}
+        >
+          <div className={classer.drawerHeader}>
+            <IconButton onClick={handleBarMenu}>
+              {theme.direction === "ltr" ? (
+                <ChevronLeftIcon />
+              ) : (
+                <ChevronRightIcon />
+              )}
+            </IconButton>
+          </div>
+          <Divider />
+          <List>
+            {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+              <ListItem button key={text}>
+                <ListItemIcon>
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItem>
+            ))}
+          </List>
+          <Divider />
+          <List>
+            {["All mail", "Trash", "Spam"].map((text, index) => (
+              <ListItem button key={text}>
+                <ListItemIcon>
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItem>
+            ))}
+          </List>
+        </Drawer>
       </div>
-      <Divider />
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-    </Drawer>
-  </div>
     </div>
   );
 }

@@ -27,12 +27,12 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
   },
   form: {
-    width: '100%', // Fix IE 11 issue.
+    width: '85%', // Fix IE 11 issue.
     marginLeft: theme.spacing(8)
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
-    width: '23.5em'
+    width: '20em'
   },
 }));
 
