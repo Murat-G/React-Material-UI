@@ -79,12 +79,12 @@ export default function FooterBar() {
             Tüm hakları "ULAK Yazılım Teknoloji ve Taşımacılık A.Ş"' ye aittir.
           </Typography>
           <Copyright />
-          <Typography>
+          <Typography component={'span'}>
             <div className={classes.icons}>
               <ul className={classes.iconContainer}>
                 <li className={classes.iconItem}> 
                 <Link href="https://www.facebook.com/ulakappcom/">
-                  <Icon className="fab fa-facebook" color="red"/>
+                  <Icon className="fab fa-facebook" />
                 </Link>
                 </li>
                 

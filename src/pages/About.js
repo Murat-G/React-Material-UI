@@ -1,7 +1,7 @@
 import React from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Paper from "@material-ui/core/Paper";
-import {Grid, Typography} from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "5em",
   },
   image: {
-    width: '40vh',
+    width: "40vh",
   },
   gridpaper: {
     borderRadius: "10em",
@@ -30,17 +30,22 @@ const useStyles = makeStyles((theme) => ({
   cart: {
     display: "flex",
     flexDirection: "column",
-    letterSpacing: "5.5",
-  }, 
+    marginTop: "2em",
+    lineHeight: "3em",
+  },
+  cart2: {
+    display: "flex",
+    flexDirection: "column",
+    textAlign:'center'
+  },
   avatar: {
     width: "30em",
     margin: "1rem auto",
-    backgroundColor:"#FAFAFA",
+    backgroundColor: "#FAFAFA",
     "@media (max-width: 700px)": {
       width: "45vh",
     },
   },
- 
 }));
 
 export default function SignInSide() {
@@ -49,41 +54,69 @@ export default function SignInSide() {
   return (
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
-      <div style={{display:'flex', flexDirection:'column',alignItems:'center'}}>
-        <img src="https://ulakapp.com/img/ulak-app-on-iphone.png" alt="mobile" className={classes.image} />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
         <img
-              src="https://appradar.com/wp-content/uploads/App-Store-Google-Play-Icons.png" alt="store"
-              className={classes.avatar}
+          src="https://ulakapp.com/img/ulak-app-on-iphone.png"
+          alt="mobile"
+          className={classes.image}
+        />
+        <img
+          src="https://appradar.com/wp-content/uploads/App-Store-Google-Play-Icons.png"
+          alt="store"
+          className={classes.avatar}
         />
       </div>
-      <Grid item xs={12}  md={5} component={Paper} square className={classes.gridpaper}>
+      <Grid
+        item
+        xs={12}
+        md={5}
+        component={Paper}
+        square
+        className={classes.gridpaper}
+      >
         <div className={classes.paper}>
           <div className={classes.cart}>
-            <Typography variant="h4" color="secondary">
-            <h5 style={{ marginTop:"0px"}}> Kişiye Özel Kurye ULAK</h5>
+            <Typography color="secondary" component="div">
+              <h1 style={{ marginTop: "0px", textAlign: "center" }}>
+                Kişiye Özel Kurye ULAK
+              </h1>
             </Typography>
-            <Typography align="left" variant="h6">
-              {message}
+            <Typography component="div" color="textSecondary">
+              <h4>{message}</h4>
             </Typography>
           </div>
-          <div className={classes.cart}>
-            <Typography color="primary" variant="h4">
-              Özellikleri;
+          <div className={classes.cart2}>
+            <Typography color="primary" component="div">
+              <h2>Özellikleri</h2>
             </Typography>
-            <Typography align="left" variant="h6">
-              <h5>En Yakın Kuryeyi Çağırma</h5>
-              <p>ULAK, bulunduğun konuma en yakın kuryeyi çağırmanı sağlar.</p>
+            <Typography component="div">
+              <h3>En Yakın Kuryeyi Çağırma</h3>
+              <Typography component="div" color="textSecondary">
+                <h4>
+                  ULAK, bulunduğun konuma en yakın kuryeyi çağırmanı sağlar.
+                </h4>
+              </Typography>
             </Typography>
-            <Typography align="left" variant="h6">
-              <h5>Anlık Kurye Takibi</h5>
-              <p>
-                ULAK, kuryenin konumunu göstererek gönderini anlık takip etmene
-                imkan verir.
-              </p>
+            <Typography component="div">
+              <h3>Anlık Kurye Takibi</h3>
+              <Typography component="div" color="textSecondary">
+                <h4>
+                  ULAK, kuryenin konumunu göstererek gönderini anlık takip
+                  etmene imkan verir.
+                </h4>
+              </Typography>
             </Typography>
-            <Typography align="left" variant="h6">
-              <h5>Farklı Gönderi Seçenekleri</h5>
-              <p>İhtiyacına göre farklı gönderi tipleri seçmeni sağlar.</p>
+            <Typography component="div">
+              <h3>Farklı Gönderi Seçenekleri</h3>
+              <Typography component="div" color="textSecondary">
+                <h4>İhtiyacına göre farklı gönderi tipleri seçmeni sağlar.</h4>
+              </Typography>
             </Typography>
           </div>
         </div>

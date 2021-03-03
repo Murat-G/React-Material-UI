@@ -65,6 +65,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
 const useStylesDrawer = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -162,7 +163,7 @@ function HeaderBar() {
           </IconButton>
 
           <div className={classes.fullHeader}>
-            <Typography variant="h7" className={classes.title}>
+            <Typography variant="h6" className={classes.title}>
               <Button href="/">
                 <div className={classes.leftTitle}>
                   <Avatar src={UlakApp} />
@@ -171,7 +172,7 @@ function HeaderBar() {
               </Button>
             </Typography>
 
-            <Typography variant="h7" className={classes.title}>
+            <Typography variant="h6" className={classes.title}>
               <div className={classes.middle}>
                 <Button color="inherit" href="/">
                   Home
@@ -187,7 +188,7 @@ function HeaderBar() {
               </div>
             </Typography>
 
-            <Typography variant="h7" className={classes.title}>
+            <Typography variant="h6" className={classes.title}>
               <div className={classes.rightTitle}>
                 <Button color="inherit" href="/login">
                   Login

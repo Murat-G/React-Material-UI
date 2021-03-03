@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import GoogleMap from "../components/GoogleMap";
+import MapContainer from "../components/GoogleMap";
 import { Icon } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
@@ -68,8 +68,8 @@ function Contact() {
             </div>
 
 
-            <div style={{ display: "flex", width: "40em"}}>
-                <GoogleMap />
+            <div style={{ display: "flex"}}>
+                <MapContainer />
             </div>
         </div>
     );

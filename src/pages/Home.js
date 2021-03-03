@@ -36,7 +36,7 @@ function Home() {
   return (
     <Container component="main" maxWidth="xl">
     <div className={classes.root} >
-        <Grid marginTop = {5}>
+        <Grid >
             <Typography variant="h4" component="h4" gutterBottom  align="center">
                 KİŞİYE ÖZEL KURYE
             </Typography>
@@ -45,8 +45,8 @@ function Home() {
             </Typography>  
         </Grid>
 
-      <Grid container lg={12} xs={12} spacing={3}>
-        <Grid container lg={12} justify="center" spacing={3}>
+      <Grid container item={true}  lg={12} xs={12} spacing={3}>
+        <Grid container item={true}  lg={12} justify="center" spacing={3}>
           <Grid item  lg ={4} xs={12} sm={8}>
             <Paper className={classes.paper}>
               <Grid container wrap="nowrap" spacing={3}>
@@ -74,7 +74,7 @@ function Home() {
           </Grid>
         </Grid>
 
-        <Grid container lg={12} justify="center" spacing={3}>
+        <Grid container item={true}  lg={12} justify="center" spacing={3}>
           <Grid item lg ={4} xs={12} sm={8}>
             <Paper className={classes.paper}>
               <Grid container wrap="nowrap" spacing={2}>
@@ -102,7 +102,7 @@ function Home() {
           </Grid>
         </Grid>
 
-        <Grid container lg={12} justify="center" spacing={3}>
+        <Grid container lg={12} item={true}  justify="center" spacing={3}>
           <Grid item lg ={4} xs={12} sm={8}>
             <Paper className={classes.paper}>
               <Grid container wrap="nowrap" spacing={2}>
