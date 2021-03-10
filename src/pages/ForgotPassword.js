@@ -9,6 +9,13 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import ulakapp from '../asset/ulakapp.png';
+import {useFormik} from 'formik';
+import * as Yup from "yup";
+
+
+const forgetValidationSchema = Yup.object().shape({
+  email: Yup.string().email("Invalid Email").required("Email is required!!"),
+});
 
 
 const stylesFunc = makeStyles((theme) => ({
@@ -29,6 +36,18 @@ const stylesFunc = makeStyles((theme) => ({
 function ForgotPassword() {
   const forgotPasswordStyles = stylesFunc();
 
+
+  const formik = useFormik({
+    initialValues: {
+      email: '',
+    },
+    validationSchema: forgetValidationSchema,
+    onSubmit: values => {
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
+
+
   return (
     <Container className={forgotPasswordStyles.wrapper} maxWidth="sm">
       <Avatar className={forgotPasswordStyles.avatar} src={ulakapp} />  
@@ -36,7 +55,7 @@ function ForgotPassword() {
         Forgot Password
       </Typography>
         
-          <form>
+          <form onSubmit={formik.handleSubmit}>
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <TextField
@@ -44,6 +63,11 @@ function ForgotPassword() {
                   label="Email"
                   variant="outlined"
                   fullWidth
+                  value={formik.values.email}
+                  onChange={formik.handleChange}
+                  required
+                  error={formik.touched.email && formik.errors.email}
+                  helperText={formik.touched.email && formik.errors.email}
                 />
               </Grid>
 
